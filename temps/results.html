@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/results.css') }}">
     <title>Weather</title>
 </head>
 <body>
-    <div id="weatherResults">
-        <h3>Weather in {{ city }}, {{ country }}</h3>
-        <h2>{{ temp }}° F</h2>
-        <h3>{{ weather }}</h3>
-        <h4>Feels like: {{ feels_like }}° F</h4>
+    <div class="container">
+        <div id="weatherResults">
+            <h3>Weather in {{ city }}, {{ country }}</h3>
+            <h2>{{ temp }}° F</h2>
+            <h3>{{ weather }}</h3>
+            <h4>Feels like: {{ feels_like }}° F</h4>
+            <img src={{ icon }} />
+        </div>
     </div>
+    
 </body>
 </html>

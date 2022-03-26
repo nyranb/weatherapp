@@ -18,10 +18,11 @@ def render_results():
     weather = data["weather"][0]["main"]
     city = data["name"]
     country = data["sys"]["country"]
+    icon = "https://openweathermap.org/img/wn/" + data["weather"][0]["icon"] + "@2x.png"
 
     return render_template('results.html',
                            city=city, country=country, temp=temp,
-                           feels_like=feels_like, weather=weather)
+                           feels_like=feels_like, weather=weather, icon=icon)
 
 
 def get_weather_results(zip_code, api_key):

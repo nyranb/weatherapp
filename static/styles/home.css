@@ -1,5 +1,48 @@
-.heading-title {
-    font-family: 'Inter', sans-serif;
+body {
+    font-family: 'Rubik', sans-serif;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#weatherForm { 
+    font-size: 20px;
+    display: flex;
+    width: auto;
+}
+
+#weatherForm label {
+    padding-left: 1em;
+}
+
+#weatherSubmit {
+    width: 150px;
+    height: 30px;
+    margin-left: 1em;
+    border: none;
+    outline: none;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+#weatherInput {
+}
+
+#heading-title {
+    font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
     color: rgba(25, 139, 184, 0.533);
     font-size: 50px;
