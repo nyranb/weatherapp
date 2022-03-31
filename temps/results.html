@@ -4,19 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/results.css') }}">
+    
     <title>Weather</title>
 </head>
 <body>
     <div class="container">
-        <div id="weatherResults">
-            <h3>Weather in {{ city }}, {{ country }}</h3>
+        <div class="tab">
+            <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'currentResults')">Current Weather</button>
+            <button class="tablinks" onclick="openCity(event, 'dailyResults')">Daily Weather</button>
+            <button class="tablinks" onclick="openCity(event, 'hourlyResults')">Hourly Weather</button>
+        </div>
+        <div id="currentResults" class="results">
+            <h3>Weather in {{ city }}, {{ country }} right now!</h3>
             <h2>{{ temp }}° F</h2>
             <h3>{{ weather }}</h3>
             <h4>Feels like: {{ feels_like }}° F</h4>
             <img src={{ icon }} />
         </div>
+        <div id="dailyResults" class="results">
+            <h3>Weather in {{ city }}, {{ country }} this week!</h3>
+        </div>
+        <div id="hourlyResults" class="results">
+            <h3>Weather in {{ city }}, {{ country }} today!</h3>
+        </div>
+        <div>
+            <a href="/" id="search_again">Search somewhere else!</a>
+        </div>
     </div>
-    
+    <script src="../static/js/results.js"></script>
+    <script>
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>
 </html>

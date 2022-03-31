@@ -1,13 +1,16 @@
 body {
     font-family: 'Rubik', sans-serif;
     width: 100%;
+    background-color: #7798AB;
+    font-size: 18px;
 }
 
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     flex-direction: column;
+    margin-top: 25vh;
 }
 
 #weatherForm { 
@@ -44,6 +47,6 @@ body {
 #heading-title {
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
-    color: rgba(25, 139, 184, 0.533);
-    font-size: 50px;
+    color: #E8DCB9;
+    font-size: 4em;
 }
