@@ -12,12 +12,12 @@
     
     <title>Weather</title>
 </head>
+
 <body>
     <div class="container">
         <div class="tab">
             <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'currentResults')">Current Weather</button>
             <button class="tablinks" onclick="openCity(event, 'dailyResults')">Daily Weather</button>
-            <button class="tablinks" onclick="openCity(event, 'hourlyResults')">Hourly Weather</button>
         </div>
         <div id="currentResults" class="results">
             <h3>Weather in {{ city }}, {{ country }} right now!</h3>
@@ -28,9 +28,41 @@
         </div>
         <div id="dailyResults" class="results">
             <h3>Weather in {{ city }}, {{ country }} this week!</h3>
-        </div>
-        <div id="hourlyResults" class="results">
-            <h3>Weather in {{ city }}, {{ country }} today!</h3>
+            <div id="day0" class="daily">
+                <img src={{ icon0 }} />
+                <h3>{{ weather0 }}</h3>
+                <h2>{{ temp0 }}° F</h2>
+            </div>
+            <div id="day1" class="daily">
+                <img src={{ icon1 }} />
+                <h3>{{ weather1 }}</h3>
+                <h2>{{ temp1 }}° F</h2>
+            </div>
+            <div id="day2" class="daily">
+                <img src={{ icon2 }} />
+                <h3>{{ weather2 }}</h3>
+                <h2>{{ temp2 }}° F</h2>
+            </div>
+            <div id="day3" class="daily">
+                <img src={{ icon3 }} />
+                <h3>{{ weather3 }}</h3>
+                <h2>{{ temp3 }}° F</h2>
+            </div>
+            <div id="day4" class="daily">
+                <img src={{ icon4 }} />
+                <h3>{{ weather4 }}</h3>
+                <h2>{{ temp4 }}° F</h2>
+            </div>
+            <div id="day5" class="daily">
+                <img src={{ icon5 }} />
+                <h3>{{ weather5 }}</h3>
+                <h2>{{ temp5 }}° F</h2>
+            </div>
+            <div id="day6" class="daily">
+                <img src={{ icon6 }} />
+                <h3>{{ weather6 }}</h3>
+                <h2>{{ temp6 }}° F</h2>
+            </div>
         </div>
         <div>
             <a href="/" id="search_again">Search somewhere else!</a>
